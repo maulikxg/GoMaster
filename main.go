@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"pacx/mazamamaths"
 )
 
 func Summ(nums ...int) int {
@@ -26,6 +27,10 @@ func modify(arr *[3]int) {
 	arr[0] = 100
 }
 
+func maza(a, b int, op func(int, int) int) int {
+	return op(a, b)
+}
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -33,9 +38,9 @@ func main() {
 	// result := mm.Add(2, 3)
 	// fmt.Println(result)
 	//
-	//check := mm.Add2(4, 2)
-	//fmt.Println(check)
-	//
+	check := mazamamaths.Add2(4, 2)
+	fmt.Println(check)
+
 	//mm.PublicFunction()
 
 	//ans := Summ(1, 2, 3, 4, 5)
@@ -88,4 +93,44 @@ func main() {
 
 	//var s []int
 	//fmt.Println(s == nil)
+
+	//nums := []int{10, 20, 30, 40, 50}
+	//
+	//for index, value := range nums {
+	//	fmt.Println("index:", index, "value:", value)
+	//}
+	//for _, value := range nums { // Ignoring index
+	//	fmt.Println(value)
+	//}
+	//for index := range nums { // Ignoring value
+	//	fmt.Println(index)
+	//}
+
+	//var mymap map[string]int
+	//fmt.Printf("%#v\n", mymap)
+	//mymap = make(map[string]int)
+	//fmt.Printf("%#v\n", mymap)
+
+	//grads := map[string]int{
+	//	"maths":     90,
+	//	"chemistry": 80,
+	//	"Physics":   50,
+	//}
+	//
+	//grads["maths"] = 85
+	//grads["History"] = 70
+	//
+	//fmt.Println(grads)
+	//
+	//var m map[string]int
+	//m["test"] = 100
+
+	add := func(a, b int) int {
+		return a + b
+	}
+	//fmt.Println(add(2, 3))
+
+	result := maza(1, 2, add)
+	fmt.Println(result)
+
 }

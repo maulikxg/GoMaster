@@ -7,11 +7,46 @@ type Mytype2 string
 
 func main() {
 
-	var name Mytype = "maulik"
+	//var name Mytype = "maulik"
+	//
+	//var surname Mytype2 = "yoho"
+	//
+	//fmt.Printf("%T , %s\n", name, name)
+	//
+	//fmt.Printf("%T , %s\n", surname, surname)
 
-	var surname Mytype2 = "yoho"
+	// switch day := "monday"; day {
 
-	fmt.Printf("%T , %s\n", name, name)
+	//case "monday":
+	//	fmt.Println("This is monday")
+	//	fallthrough
+	//case "tuesday":
+	//	fmt.Println("This is tuesday")
+	//default:
+	//	fmt.Println("This is default")
+	//
+	//}
 
-	fmt.Printf("%T , %s\n", surname, surname)
+	yo := add()
+	yo(5)
+	fmt.Println(yo(10))
+
+	type person struct {
+		name string
+		age  int
+	}
+
+	p := person{"maulik ", 50}
+	fmt.Println(p)
+
+}
+
+func add() func(int) int {
+	sum := 0
+
+	return func(v int) int {
+		sum += v
+		return sum
+	}
+
 }

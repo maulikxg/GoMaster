@@ -1,0 +1,3 @@
+go test fuzz v1
+[]byte("a\xa2\xa2b0")
+[]byte("a")

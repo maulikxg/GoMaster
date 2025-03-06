@@ -52,19 +52,19 @@ func main() {
 	//time.Sleep(1 * time.Second)
 	//fmt.Println("Main function execution...")
 
-	//defer func() {
-	//	if r := recover(); r != nil {
-	//		fmt.Println("First recover:", r)
-	//	}
-	//}()
-	//
-	//defer func() {
-	//	if r := recover(); r != nil {
-	//		fmt.Println("Second recover:", r)
-	//	}
-	//}()
-	//
-	//panic("Panic triggered!")
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("First recover:", r)
+		}
+	}()
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Second recover:", r)
+		}
+	}()
+
+	panic("Panic triggered!")
 
 	//defer func() {
 	//	if r := recover(); r != nil {

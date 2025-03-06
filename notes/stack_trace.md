@@ -101,13 +101,3 @@ main.worker()
 
 ---
 
-## **Comparison Table**
-| Feature           | `debug.Stack()` | `runtime.Stack()` |
-|------------------|---------------|----------------|
-| Output Format   | Readable      | Raw (byte slice) |
-| Captures       | Current goroutine only | Current or all goroutines |
-| Performance    | Slightly slower | More efficient |
-| Use Case       | Debugging a single function | Debugging concurrency issues |
-
----
-

@@ -10,7 +10,6 @@ func main() {
 				fmt.Println("This is R:", r)
 			}
 		}()
-
 	}()
 
 	panic("this is me hii")
